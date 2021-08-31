@@ -6,8 +6,26 @@
 // Dichiariamo chi ha vinto.
 
 var pariODispari = prompt("Scegli Pari o Dispari");
+pariODispari = pariODispari.charAt(0).toUpperCase() + pariODispari.slice(1).toLowerCase();
+
+while (!isNaN(pariODispari)) {
+    alert("Errore! Devi scegliere inserendo la PAROLA Pari o Dispari");
+    var pariODispari = prompt("Scegli Pari o Dispari");
+    pariODispari = pariODispari.charAt(0).toUpperCase() + pariODispari.slice(1).toLowerCase();   
+}
 
 var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+
+while (isNaN(numeroUtente)) {
+    alert("Errore! Devi inserire un numero da 1 a 5");
+    var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+}
+
+while (numeroUtente < 1 || numeroUtente > 5) {
+    alert("Errore! Devi inserire un NUMERO da 1 a 5");
+    var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+}
+
 console.log(numeroUtente);
 
 function numeroRandom(min, max){
