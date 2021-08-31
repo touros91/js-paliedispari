@@ -2,6 +2,8 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
+// 1. creo una funzione che genera e ritorna una stringa al contrario, attraversando AL CONTRARIO la stringa originale e salvando in una nuova stringa vuota lettera per lettera 
+
 function palindroma(parola) {
     var parolaReverse = "";
     for (var i = parola.length - 1; i >= 0; i--) {
@@ -13,6 +15,8 @@ function palindroma(parola) {
 
 var parolaUtente = prompt("Inserisci una parola");
 var parolaNuova = palindroma(parolaUtente);
+
+// 2. controllo se la parola inserita dall'utente è palindroma ovvero se è uguale alla stessa parola in modo invertito
 
 if (parolaUtente == parolaNuova) {
     alert("La parola è palindroma");
