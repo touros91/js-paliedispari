@@ -24,7 +24,6 @@ if (parolaUtente == parolaNuova) {
     alert("La parola non è palindroma");
 }
 
-
 // VARIANTE CON IL CICLO WHILE
 
 // function palindroma(parola){
@@ -33,7 +32,6 @@ if (parolaUtente == parolaNuova) {
 //     var controllo;
 
 //     while (i > 0 && x < parola.length) {
-//     // for (var i = parola.length-1; i > 0; i--) {
 //         if (parola.charAt(i) == parola.charAt(x)) {
 //             x++;
 //             i--;
