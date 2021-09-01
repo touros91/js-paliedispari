@@ -7,31 +7,22 @@
 
 // 1a. chiedo all'utente di scegliere Pari o Dispari e se minuscolo converto la prima lettera in maiuscolo
 
-var pariODispari = prompt("Scegli Pari o Dispari");
-pariODispari = pariODispari.charAt(0).toUpperCase() + pariODispari.slice(1).toLowerCase();
+var pariODispari = prompt("Scegli pari o dispari");
 
 // 1b. controllo se ha inserito numeri al posto di lettere e in caso richiedo di inserire la scelta
 
-while (!isNaN(pariODispari)) {
-    alert("Errore! Devi scegliere inserendo la PAROLA Pari o Dispari");
-    var pariODispari = prompt("Scegli Pari o Dispari");
-    pariODispari = pariODispari.charAt(0).toUpperCase() + pariODispari.slice(1).toLowerCase();   
+while (pariODispari !== "pari" && pariODispari !== "dispari") {
+    alert("Errore! Devi scegliere inserendo la parola pari o dispari");
+    var pariODispari = prompt("Scegli pari o dispari");
 }
 
 // 2a. chiedo di inserire un numero compreso tra 1 e 5
 var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
-// 2b. se non è un numero chiedo di inserire nuovamente un numero da 1 a 5
+// 2b. se non è un numero e se lo stesso non è compreso tra 1 e 5, chiedo di inserire nuovamente un numero da 1 a 5
 
-while (isNaN(numeroUtente)) {
+while (isNaN(numeroUtente) || numeroUtente < 1 || numeroUtente > 5) {
     alert("Errore! Devi inserire un numero da 1 a 5");
-    var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
-}
-
-// 2c. controllo se il numero inserito è compreso tra 1 e 5, in caso richiedo di inserirlo nuovamente 
-
-while (numeroUtente < 1 || numeroUtente > 5) {
-    alert("Errore! Devi inserire un NUMERO da 1 a 5");
     var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 }
 
